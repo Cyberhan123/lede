@@ -54,7 +54,7 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/jerrykuku/luci-app-vssr.git
-          git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+          # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
           git clone https://github.com/openwrt-develop/luci-app-vlmcsd.git
           
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
@@ -143,7 +143,7 @@ jobs:
           CONFIG_PACKAGE_kmod-usb2-pci=y
           CONFIG_PACKAGE_kmod-usb3=y
           EOF
-          
+
           # 常用LuCI插件选择:
           # cat >> .config <<EOF
           # CONFIG_PACKAGE_luci-app-adbyby-plus=y
@@ -156,11 +156,11 @@ jobs:
           # CONFIG_PACKAGE_luci-app-openvpn=y
           # CONFIG_PACKAGE_luci-app-openvpn-server=y
           # CONFIG_PACKAGE_luci-app-qbittorrent=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
           # CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-verysync=y
@@ -168,8 +168,8 @@ jobs:
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
           
-          CONFIG_PACKAGE_luci-app-vssr=y
-          CONFIG_PACKAGE_luci-app-adguardhome=y
+          # CONFIG_PACKAGE_luci-app-vssr=y
+          # CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
           
           EOF
@@ -181,13 +181,13 @@ jobs:
           EOF
           # 常用软件包:
           # cat >> .config <<EOF
-          # CONFIG_PACKAGE_curl=y
+          CONFIG_PACKAGE_curl=y
           # CONFIG_PACKAGE_htop=y
           # CONFIG_PACKAGE_nano=y
           # CONFIG_PACKAGE_screen=y
           # CONFIG_PACKAGE_tree=y
           # CONFIG_PACKAGE_vim-fuller=y
-          # CONFIG_PACKAGE_wget=y
+          CONFIG_PACKAGE_wget=y
           # EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           # cat >> .config <<EOF
